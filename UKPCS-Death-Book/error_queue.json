@@ -1,5 +1,10 @@
-{
-  "version": 1,
-  "updated_at": "2026-10-05T13:44:47.351Z",
-  "events": []
-}
+[
+  {
+    "test_record": true,
+    "source": "Cloudflare bridge test",
+    "question": "UKPCS Death Book bridge connectivity test",
+    "selected_answer": "TEST_ONLY",
+    "correct_answer": "TEST_ONLY",
+    "timestamp": "2026-10-06T10:46:01.597Z"
+  }
+]
