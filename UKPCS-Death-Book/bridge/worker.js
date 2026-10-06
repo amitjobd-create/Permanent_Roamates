@@ -67,7 +67,16 @@ export default {
         existing = [];
       }
     } else if (current.status !== 404) {
-      return response({ error: "GitHub read failed", details: await current.text() }, 502);
+      const details = await current.text();
+      return response({
+        error: "GitHub read failed",
+        github_status: current.status,
+        github_status_text: current.statusText,
+        github_request_id: current.headers.get("x-github-request-id"),
+        github_rate_limit_remaining: current.headers.get("x-ratelimit-remaining"),
+        github_api_version: current.headers.get("x-github-api-version"),
+        details
+      }, 502);
     }
 
     const merged = [...existing, ...incoming];
