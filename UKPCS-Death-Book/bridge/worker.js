@@ -48,6 +48,7 @@ export default {
     const headers = {
       "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
       "Accept": "application/vnd.github+json",
+      "User-Agent": "permanent-roamates-ukpcs-death-book",
       "X-GitHub-Api-Version": "2022-11-28"
     };
 
